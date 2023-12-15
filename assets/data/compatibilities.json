@@ -1,0 +1,664 @@
+{
+  "compatibilities": [
+    {
+      "signe1": "Bélier",
+      "signe2": "Taureau",
+      "compatibilite": 66
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Gémeaux",
+      "compatibilite": 16
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Cancer",
+      "compatibilite": 34
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Lion",
+      "compatibilite": 67
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Vierge",
+      "compatibilite": 85
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Balance",
+      "compatibilite": 52
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Scorpion",
+      "compatibilite": 3
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Sagittaire",
+      "compatibilite": 24
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Capricorne",
+      "compatibilite": 83
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Verseau",
+      "compatibilite": 85
+    },
+    {
+      "signe1": "Bélier",
+      "signe2": "Poissons",
+      "compatibilite": 44
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Bélier",
+      "compatibilite": 31
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Gémeaux",
+      "compatibilite": 41
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Cancer",
+      "compatibilite": 54
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Lion",
+      "compatibilite": 20
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Vierge",
+      "compatibilite": 27
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Balance",
+      "compatibilite": 75
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Scorpion",
+      "compatibilite": 3
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Sagittaire",
+      "compatibilite": 87
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Capricorne",
+      "compatibilite": 54
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Verseau",
+      "compatibilite": 88
+    },
+    {
+      "signe1": "Taureau",
+      "signe2": "Poissons",
+      "compatibilite": 77
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Bélier",
+      "compatibilite": 22
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Taureau",
+      "compatibilite": 96
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Cancer",
+      "compatibilite": 53
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Lion",
+      "compatibilite": 70
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Vierge",
+      "compatibilite": 44
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Balance",
+      "compatibilite": 88
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Scorpion",
+      "compatibilite": 94
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Sagittaire",
+      "compatibilite": 46
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Capricorne",
+      "compatibilite": 43
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Verseau",
+      "compatibilite": 76
+    },
+    {
+      "signe1": "Gémeaux",
+      "signe2": "Poissons",
+      "compatibilite": 73
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Bélier",
+      "compatibilite": 35
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Taureau",
+      "compatibilite": 48
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Gémeaux",
+      "compatibilite": 54
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Lion",
+      "compatibilite": 56
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Vierge",
+      "compatibilite": 78
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Balance",
+      "compatibilite": 53
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Scorpion",
+      "compatibilite": 58
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Sagittaire",
+      "compatibilite": 35
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Capricorne",
+      "compatibilite": 59
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Verseau",
+      "compatibilite": 1
+    },
+    {
+      "signe1": "Cancer",
+      "signe2": "Poissons",
+      "compatibilite": 93
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Bélier",
+      "compatibilite": 32
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Taureau",
+      "compatibilite": 15
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Gémeaux",
+      "compatibilite": 81
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Cancer",
+      "compatibilite": 14
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Vierge",
+      "compatibilite": 23
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Balance",
+      "compatibilite": 1
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Scorpion",
+      "compatibilite": 2
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Sagittaire",
+      "compatibilite": 40
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Capricorne",
+      "compatibilite": 63
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Verseau",
+      "compatibilite": 55
+    },
+    {
+      "signe1": "Lion",
+      "signe2": "Poissons",
+      "compatibilite": 75
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Bélier",
+      "compatibilite": 61
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Taureau",
+      "compatibilite": 32
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Gémeaux",
+      "compatibilite": 66
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Cancer",
+      "compatibilite": 53
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Lion",
+      "compatibilite": 22
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Balance",
+      "compatibilite": 91
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Scorpion",
+      "compatibilite": 83
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Sagittaire",
+      "compatibilite": 40
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Capricorne",
+      "compatibilite": 48
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Verseau",
+      "compatibilite": 64
+    },
+    {
+      "signe1": "Vierge",
+      "signe2": "Poissons",
+      "compatibilite": 43
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Bélier",
+      "compatibilite": 28
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Taureau",
+      "compatibilite": 33
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Gémeaux",
+      "compatibilite": 3
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Cancer",
+      "compatibilite": 46
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Lion",
+      "compatibilite": 75
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Vierge",
+      "compatibilite": 71
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Scorpion",
+      "compatibilite": 19
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Sagittaire",
+      "compatibilite": 62
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Capricorne",
+      "compatibilite": 81
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Verseau",
+      "compatibilite": 70
+    },
+    {
+      "signe1": "Balance",
+      "signe2": "Poissons",
+      "compatibilite": 80
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Bélier",
+      "compatibilite": 37
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Taureau",
+      "compatibilite": 49
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Gémeaux",
+      "compatibilite": 99
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Cancer",
+      "compatibilite": 24
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Lion",
+      "compatibilite": 54
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Vierge",
+      "compatibilite": 98
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Balance",
+      "compatibilite": 59
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Sagittaire",
+      "compatibilite": 75
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Capricorne",
+      "compatibilite": 8
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Verseau",
+      "compatibilite": 15
+    },
+    {
+      "signe1": "Scorpion",
+      "signe2": "Poissons",
+      "compatibilite": 7
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Bélier",
+      "compatibilite": 73
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Taureau",
+      "compatibilite": 49
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Gémeaux",
+      "compatibilite": 57
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Cancer",
+      "compatibilite": 79
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Lion",
+      "compatibilite": 76
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Vierge",
+      "compatibilite": 94
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Balance",
+      "compatibilite": 92
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Scorpion",
+      "compatibilite": 36
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Capricorne",
+      "compatibilite": 32
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Verseau",
+      "compatibilite": 34
+    },
+    {
+      "signe1": "Sagittaire",
+      "signe2": "Poissons",
+      "compatibilite": 39
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Bélier",
+      "compatibilite": 25
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Taureau",
+      "compatibilite": 50
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Gémeaux",
+      "compatibilite": 23
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Cancer",
+      "compatibilite": 74
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Lion",
+      "compatibilite": 27
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Vierge",
+      "compatibilite": 65
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Balance",
+      "compatibilite": 33
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Scorpion",
+      "compatibilite": 75
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Sagittaire",
+      "compatibilite": 13
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Verseau",
+      "compatibilite": 40
+    },
+    {
+      "signe1": "Capricorne",
+      "signe2": "Poissons",
+      "compatibilite": 37
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Bélier",
+      "compatibilite": 31
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Taureau",
+      "compatibilite": 95
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Gémeaux",
+      "compatibilite": 45
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Cancer",
+      "compatibilite": 57
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Lion",
+      "compatibilite": 32
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Vierge",
+      "compatibilite": 48
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Balance",
+      "compatibilite": 84
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Scorpion",
+      "compatibilite": 1
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Sagittaire",
+      "compatibilite": 47
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Capricorne",
+      "compatibilite": 92
+    },
+    {
+      "signe1": "Verseau",
+      "signe2": "Poissons",
+      "compatibilite": 25
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Bélier",
+      "compatibilite": 9
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Taureau",
+      "compatibilite": 51
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Gémeaux",
+      "compatibilite": 94
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Cancer",
+      "compatibilite": 46
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Lion",
+      "compatibilite": 90
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Vierge",
+      "compatibilite": 60
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Balance",
+      "compatibilite": 24
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Scorpion",
+      "compatibilite": 82
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Sagittaire",
+      "compatibilite": 7
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Capricorne",
+      "compatibilite": 90
+    },
+    {
+      "signe1": "Poissons",
+      "signe2": "Verseau",
+      "compatibilite": 75
+    }
+  ]
+}

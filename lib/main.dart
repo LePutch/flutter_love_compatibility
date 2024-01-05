@@ -1,14 +1,20 @@
 // ignore_for_file: library_private_types_in_public_api
 
-import 'dart:math';
+import 'package:compatibilitehoroscope/src/ad_mob_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pulsator/pulsator.dart';
 import 'package:time_picker_spinner_pop_up/time_picker_spinner_pop_up.dart';
 import 'package:zodiac/zodiac.dart';
 import './src/components/homeBackground.dart';
+import 'package:animate_gradient/animate_gradient.dart';
+
+import 'src/components/resultPage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
   runApp(const MyApp());
 }
 
@@ -31,7 +37,7 @@ class App extends StatefulWidget {
   _AppState createState() => _AppState();
 }
 
-class _AppState extends State<App> {
+class _AppState extends State<App> with SingleTickerProviderStateMixin {
   String contenu = '. . .';
   String initial1 = '?';
   String initial2 = '?';
@@ -39,10 +45,95 @@ class _AppState extends State<App> {
   DateTime selectedDateTime2 = DateTime.now();
   TextEditingController firstNameController1 = TextEditingController();
   TextEditingController firstNameController2 = TextEditingController();
+  bool areFieldsFilled = false;
+
+  BannerAd? _bannerAd;
+
+  @override
+  void initState() {
+    _createBannerAd();
+    _createRewardedAd();
+  }
+
+  void _createBannerAd() {
+    _bannerAd = BannerAd(
+      size: AdSize.fullBanner,
+      adUnitId: AdMobService.bannerAdUnitId!,
+      listener: BannerAdListener(
+        onAdLoaded: (_) {
+          setState(() {});
+        },
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+        },
+      ),
+      request: const AdRequest(),
+    )..load();
+  }
+
+  RewardedAd? _rewardedAd;
+
+  void _createRewardedAd() {
+    RewardedAd.load(
+      adUnitId: AdMobService.rewardedAdUnitId!,
+      request: const AdRequest(),
+      rewardedAdLoadCallback: RewardedAdLoadCallback(
+        onAdLoaded: (ad) => setState(() {
+          _rewardedAd = ad;
+        }),
+        onAdFailedToLoad: (error) {
+          setState(() {
+            _rewardedAd = null;
+          });
+        },
+      ),
+    );
+  }
+
+  void _showRewardedAd(String name1, String name2) {
+    if (_rewardedAd != null) {
+      _rewardedAd!.fullScreenContentCallback = FullScreenContentCallback(
+        onAdDismissedFullScreenContent: (ad) {
+          ad.dispose();
+          _createRewardedAd();
+
+          // Naviguer vers la nouvelle page lorsque la publicité est fermée
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ResultPage(
+                  contenu: '${calculateCompatibility(name1, name2)}%'),
+            ),
+          );
+        },
+        onAdFailedToShowFullScreenContent: (RewardedAd ad, AdError error) {
+          ad.dispose();
+          _createRewardedAd();
+        },
+      );
+
+      _rewardedAd!.setImmersiveMode(true);
+      _rewardedAd!.show(onUserEarnedReward: (ad, reward) {
+        // Cette partie sera exécutée lorsque l'utilisateur aura gagné une récompense
+      });
+      _rewardedAd = null;
+    }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    areFieldsFilled = firstNameController1.text.isNotEmpty &&
+        firstNameController2.text.isNotEmpty &&
+        selectedDateTime1.year != DateTime.now().year &&
+        selectedDateTime2.year != DateTime.now().year;
+
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: HomeBackground(
         child: Stack(
           children: [
@@ -52,16 +143,63 @@ class _AppState extends State<App> {
               initial1: initial1,
               initial2: initial2,
             ),
+            //bottom banner ad
+            Positioned(
+              bottom: 0,
+              child: _bannerAd == null
+                  ? Container()
+                  : SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      child: AdWidget(
+                        ad: _bannerAd!,
+                      ),
+                    ),
+            ),
             Positioned(
               top: MediaQuery.of(context).padding.top + kToolbarHeight + 500,
-              left: MediaQuery.of(context).size.width / 2 - 100,
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    contenu = '${Random().nextInt(101)}%';
-                  });
-                },
-                child: const Text('Calculer la compatibilité'),
+              left: MediaQuery.of(context).size.width / 2 - 110,
+              child: ElevatedButton.icon(
+                onPressed: areFieldsFilled
+                    ? () {
+                        if (firstNameController1.text.isNotEmpty &&
+                            firstNameController2.text.isNotEmpty &&
+                            selectedDateTime1 != DateTime.now() &&
+                            selectedDateTime2 != DateTime.now()) {
+                          setState(() {
+                            String name1 = firstNameController1.text;
+                            String name2 = firstNameController2.text;
+                            Future.delayed(const Duration(seconds: 10), () {
+                              setState(() {
+                                contenu =
+                                    '${calculateCompatibility(name1, name2)}%';
+                              });
+                            });
+
+                            _showRewardedAd(name1, name2);
+                          });
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                'Veuillez remplir tous les prénoms et dates de naissance.',
+                              ),
+                            ),
+                          );
+                        }
+                      }
+                    : null,
+                icon: const Icon(Icons.calculate),
+                label: const Text(
+                  'Calculer la compatibilité',
+                  style: TextStyle(fontSize: 16),
+                ),
+                style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(10),
+                  backgroundColor: MaterialStateProperty.all(areFieldsFilled
+                      ? const Color.fromARGB(255, 158, 52, 66)
+                      : Colors.grey),
+                ),
               ),
             ),
             Positioned(
@@ -235,6 +373,8 @@ class HeaderSection extends StatelessWidget {
       ],
     );
   }
+
+  //function for time
 }
 
 class CustomCard extends StatefulWidget {
@@ -377,4 +517,51 @@ class _CustomCardState extends State<CustomCard> {
         ? 'assets/images/noidea.png'
         : 'assets/images/$zodiacSign.png';
   }
+}
+
+int sumOfLetters(String name) {
+  return name
+      .split('')
+      .map((char) => char.codeUnitAt(0) - 64)
+      .reduce((a, b) => a + b);
+}
+
+int calculateCompatibility(String name1, String name2) {
+  if (name1 == 'Jérémy' && name2 == 'Océane' ||
+      name1 == 'Océane' && name2 == 'Jérémy') {
+    return 100;
+  }
+  if (name1 == 'Jérémy' && name2 == 'Adrian' ||
+      name1 == 'Adrian' && name2 == 'Jérémy') {
+    return 100;
+  }
+  if (name1 == 'Jérémy' && name2 == 'Lucas' ||
+      name1 == 'Lucas' && name2 == 'Jérémy') {
+    return 100;
+  }
+  if (name1 == 'Jérémy' && name2 == 'William' ||
+      name1 == 'William' && name2 == 'Jérémy') {
+    return 100;
+  }
+
+  int value1 = _calculateValue(name1);
+  int value2 = _calculateValue(name2);
+
+  int totalValue = value1 + value2;
+
+  int compatibility = ((totalValue % 100) * 100) ~/ 100;
+
+  return compatibility;
+}
+
+int _calculateValue(String name) {
+  int sum = 0;
+  for (int i = 0; i < name.length; i++) {
+    sum += _charToValue(name[i].toUpperCase());
+  }
+  return sum;
+}
+
+int _charToValue(String char) {
+  return char.codeUnitAt(0) - 'A'.codeUnitAt(0) + 1;
 }
